@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mahfuzur Rahman · Graphic designer</title>
+  <!-- Font Awesome 6 (free) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Roboto, system-ui, -apple-system, sans-serif;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background-color: #fcfcfc;
+      color: #1e1e2a;
+      line-height: 1.5;
+    }
+
+    /* container for consistent width */
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* ----- header ----- */
+    header {
+      background: #ffffff;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.02);
+      padding: 16px 0;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      border-bottom: 1px solid #eeeef5;
+    }
+
+    .header-flex {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    /* logo exact size 268x46 */
+    .logo {
+      width: 268px;
+      height: 46px;
+      background: linear-gradient(145deg, #1e1e2a, #2a2a3a);
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 1.3rem;
+      letter-spacing: 0.5px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+      flex-shrink: 0;
+      text-transform: uppercase;
+    }
+    .logo span {
+      font-size: 0.85rem;
+      font-weight: 300;
+      margin-left: 6px;
+      opacity: 0.9;
+    }
+
+    /* navigation */
+    nav ul {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+      flex-wrap: wrap;
+    }
+    nav a {
+      text-decoration: none;
+      font-weight: 500;
+      color: #2d2d3a;
+      font-size: 1rem;
+      transition: 0.2s;
+      padding: 6px 0;
+      border-bottom: 2px solid transparent;
+    }
+    nav a:hover {
+      color: #2563eb;
+      border-bottom-color: #2563eb;
+    }
+
+    /* ----- sections general ----- */
+    section {
+      padding: 80px 0;
+    }
+    section:nth-child(even) {
+      background-color: #f8f9ff;
+    }
+    h2 {
+      font-size: 2.2rem;
+      font-weight: 700;
+      margin-bottom: 2rem;
+      color: #0b0b1a;
+      letter-spacing: -0.02em;
+      border-left: 6px solid #2563eb;
+      padding-left: 1.2rem;
+    }
+
+    /* ----- hero (#home) ----- */
+    .hero-grid {
+      display: flex;
+      align-items: center;
+      gap: 3rem;
+      flex-wrap: wrap;
+    }
+    .hero-text {
+      flex: 1 1 400px;
+    }
+    .hero-text h1 {
+      font-size: 3rem;
+      font-weight: 800;
+      line-height: 1.2;
+      margin-bottom: 0.5rem;
+      background: linear-gradient(to right, #1e1e2a, #2563eb);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .hero-tagline {
+      font-size: 1.3rem;
+      color: #3f3f56;
+      margin-bottom: 1rem;
+    }
+    .hero-phone {
+      display: inline-block;
+      background: #eef2ff;
+      padding: 8px 18px;
+      border-radius: 40px;
+      font-weight: 600;
+      margin: 1.5rem 0 2rem;
+      border: 1px solid #d9e2ef;
+    }
+    .hero-phone i {
+      color: #2563eb;
+      margin-right: 8px;
+    }
+    .btn {
+      display: inline-block;
+      background-color: #2563eb;
+      color: white;
+      font-weight: 600;
+      padding: 12px 32px;
+      border-radius: 40px;
+      text-decoration: none;
+      margin-right: 12px;
+      transition: 0.15s;
+      border: 1px solid #2563eb;
+    }
+    .btn-outline {
+      background: transparent;
+      color: #2563eb;
+      border: 1px solid #2563eb;
+    }
+    .btn-outline:hover {
+      background: #2563eb;
+      color: white;
+    }
+    .btn:hover {
+      background-color: #1a4bc4;
+      border-color: #1a4bc4;
+    }
+    .hero-image {
+      flex: 0 0 280px;
+      height: 280px;
+      background: linear-gradient(135deg, #cfd9ff, #a0b5fc);
+      border-radius: 40% 60% 30% 70% / 50% 40% 60% 50%;
+      box-shadow: 0 20px 30px -10px rgba(37,99,235,0.3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #1e2b5a;
+      font-size: 3rem;
+      font-weight: 600;
+    }
+    .hero-image i {
+      font-size: 5rem;
+      opacity: 0.7;
+      color: #ffffffcc;
+    }
+
+    /* ----- about & skills ----- */
+    .about-text p {
+      font-size: 1.2rem;
+      max-width: 900px;
+      color: #2d2d40;
+    }
+    .skills-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      list-style: none;
+      margin-top: 2rem;
+    }
+    .skills-list li {
+      background: white;
+      padding: 0.8rem 2rem 0.8rem 1.5rem;
+      border-radius: 60px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.02);
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      border: 1px solid #eaeef5;
+    }
+    .skills-list i {
+      color: #2563eb;
+      font-size: 1.4rem;
+      width: 1.8rem;
+    }
+
+    /* ----- services (pricing) ----- */
+    .pricing-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      justify-content: center;
+    }
+    .pricing-card {
+      background: white;
+      border-radius: 24px;
+      padding: 2rem 2rem 2.5rem;
+      flex: 1 1 300px;
+      box-shadow: 0 15px 30px -10px rgba(0,0,0,0.05);
+      border: 1px solid #f0f0fa;
+      transition: transform 0.2s;
+    }
+    .pricing-card:hover {
+      transform: translateY(-6px);
+    }
+    .pricing-card h3 {
+      font-size: 1.8rem;
+      margin-bottom: 1.5rem;
+      color: #12122c;
+      border-bottom: 2px dashed #ccc;
+      padding-bottom: 0.75rem;
+    }
+    .pricing-card ul {
+      list-style: none;
+      margin-bottom: 2rem;
+    }
+    .pricing-card li {
+      padding: 0.6rem 0;
+      border-bottom: 1px solid #f0f0fc;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .pricing-card li::before {
+      content: "▹";
+      color: #2563eb;
+      font-weight: bold;
+    }
+    .price {
+      font-size: 2rem;
+      font-weight: 800;
+      color: #0f172a;
+      background: #f2f5ff;
+      display: inline-block;
+      padding: 0.3rem 1.8rem;
+      border-radius: 60px;
+    }
+    .price small {
+      font-size: 1rem;
+      font-weight: 400;
+      color: #4b5563;
+    }
+
+    /* ----- gallery (exactly 275x275 cells) ----- */
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 275px);
+      gap: 24px;
+      justify-content: center;
+      margin-top: 2.5rem;
+    }
+    .gallery-item {
+      width: 275px;
+      height: 275px;
+      border-radius: 20px;
+      overflow: hidden;
+      position: relative;
+      box-shadow: 0 12px 25px -8px rgba(0,0,0,0.15);
+      transition: all 0.2s;
+      background-color: #d0daff;
+    }
+    .gallery-item:hover {
+      transform: scale(1.02);
+      box-shadow: 0 22px 30px -8px #2564eb70;
+    }
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    .gallery-caption {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: linear-gradient(transparent, rgba(0,0,0,0.8));
+      color: white;
+      padding: 16px 8px 8px;
+      text-align: center;
+      font-weight: 600;
+      font-size: 0.95rem;
+      text-shadow: 0 1px 3px black;
+    }
+
+    /* ----- contact ----- */
+    #contact .container {
+      text-align: center;
+    }
+    .contact-block {
+      background: white;
+      max-width: 600px;
+      margin: 2rem auto 0;
+      padding: 2.5rem;
+      border-radius: 48px;
+      box-shadow: 0 20px 35px -8px #d9e2f0;
+    }
+    .contact-phone-big {
+      font-size: 2rem;
+      font-weight: 700;
+      color: #1e1e2a;
+      margin: 1rem 0;
+      letter-spacing: 1px;
+    }
+    .contact-phone-big i {
+      color: #2563eb;
+      margin-right: 12px;
+    }
+
+    /* ----- footer ----- */
+    footer {
+      background: #0e0e1a;
+      color: #ddddff;
+      padding: 40px 0 30px;
+      border-top: 1px solid #2a2a40;
+    }
+    .footer-flex {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 24px;
+    }
+    .social-icons a {
+      color: white;
+      background: #26263b;
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      margin-left: 12px;
+      font-size: 1.6rem;
+      transition: 0.2s;
+      text-decoration: none;
+    }
+    .social-icons a:hover {
+      background: #2563eb;
+      transform: translateY(-4px);
+    }
+
+    /* ----- responsive ----- */
+    @media (max-width: 1200px) {
+      .gallery-grid {
+        grid-template-columns: repeat(4, minmax(220px, 1fr));
+        gap: 16px;
+      }
+      .gallery-item {
+        width: auto;
+        height: auto;
+        aspect-ratio: 1/1;
+      }
+    }
+    @media (max-width: 992px) {
+      .header-flex {
+        flex-direction: column;
+        gap: 16px;
+      }
+      nav ul {
+        justify-content: center;
+        gap: 1.2rem;
+      }
+      .hero-grid {
+        flex-direction: column;
+        text-align: center;
+      }
+      .hero-text {
+        text-align: center;
+      }
+      h2 {
+        font-size: 2rem;
+      }
+      .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    @media (max-width: 600px) {
+      .gallery-grid {
+        grid-template-columns: 1fr;
+      }
+      .pricing-grid {
+        flex-direction: column;
+      }
+      .footer-flex {
+        flex-direction: column;
+        text-align: center;
+      }
+      .social-icons a {
+        margin: 0 6px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<!-- HEADER (with exact logo size) -->
+<header>
+  <div class="container header-flex">
+    <div class="logo">
+      <img src="images/horizontal logo.png" alt="">
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <!-- HERO (home) -->
+  <section id="home">
+    <div class="container hero-grid">
+      <div class="hero-text">
+        <h1>Mahfuzur Rahman</h1>
+        <div class="hero-tagline">Professional graphic designer ·
+          three years plus working experience</div>
+        <p style="font-size: 1.1rem; color:#2d3a5e;">Adobe Photoshop · Illustrator · After Effects <br> <span style="background:#eef; padding:2px 10px; border-radius:20px;">📘 learning UI/UX</span></p>
+        <div class="hero-phone">
+          <i class="fas fa-phone-alt"></i> +8801745556312
+        </div>
+        <div>
+          <a href="#gallery" class="btn">View gallery</a>
+          <a href="#contact" class="btn-outline btn">Hire me</a>
+        </div>
+      </div>
+      <div class="hero-image">
+        <img src="images/asim.png" alt="Hero image">
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="container about-text">
+      <h2>About me</h2>
+      <p>I'm Mahfuzur Rahman, a dedicated graphic designer with three years of hands‑on experience. I've helped small businesses, content creators, and agencies bring their ideas to life — from eye-catching social posts to large‑format billboards. Right now I'm expanding into UI/UX design to craft complete digital experiences. Every design is edited until you're 100% satisfied.</p>
+    </div>
+  </section>
+
+  <!-- SKILLS (with icons) -->
+  <section id="skills">
+    <div class="container">
+      <h2>Skills & tools</h2>
+      <ul class="skills-list">
+        <li><i class="fab fa-adobe"></i> Photoshop</li>
+        <li><i class="fab fa-adobe"></i> Illustrator</li>
+        <li><i class="fab fa-adobe"></i> After Effects</li>
+        <li><i class="fas fa-pencil-ruler"></i> UI/UX (learning)</li>
+        <li><i class="fas fa-palette"></i> brand identity</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- SERVICES / PRICING (exactly as described) -->
+  <section id="services">
+    <div class="container">
+      <h2>Services — fixed price</h2>
+      <div class="pricing-grid">
+        <div class="pricing-card">
+          <h3>Small format</h3>
+          <ul>
+            <li>Social media poster</li>
+            <li>Thumbnail design</li>
+            <li>Business card</li>
+            <li>Cash memo design</li>
+            <li>Banner design</li>
+          </ul>
+          <div class="price">150 <small>BDT</small></div>
+          <p style="margin-top:1rem; opacity:0.8;">per design</p>
+        </div>
+        <div class="pricing-card">
+          <h3>Large format</h3>
+          <ul>
+            <li>Billboard design</li>
+            <li>X‑banner / rollup</li>
+            <li>Large format (hoarding, backlit)</li>
+            <li>Any big size design</li>
+          </ul>
+          <div class="price">500 <small>BDT</small></div>
+          <p style="margin-top:1rem; opacity:0.8;">per design</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY (8 items, 275x275 each, 4 per row) -->
+  <section id="gallery">
+    <div class="container">
+      <h2>Design gallery</h2>
+      <div class="gallery-grid">
+        <!-- 8 gallery items with captions -->
+        <div class="gallery-item"><img src="images/1.jpg" alt="poster"><div class="gallery-caption">📌 Social poster</div></div>
+        <div class="gallery-item"><img src="images/2.jpg" alt="thumbnail"><div class="gallery-caption">🎬 Thumbnail</div></div>
+        <div class="gallery-item"><img src="images/3.jpg" alt="business card"><div class="gallery-caption">💳 Business card</div></div>
+        <div class="gallery-item"><img src="images/4.jpg" alt="cash memo"><div class="gallery-caption">🧾 Cash memo</div></div>
+        <div class="gallery-item"><img src="images/5.jpg" alt="banner"><div class="gallery-caption">📢 Banner</div></div>
+        <div class="gallery-item"><img src="images/6.jpg" alt="billboard"><div class="gallery-caption">🪧 Billboard</div></div>
+        <div class="gallery-item"><img src="images/7.jpg" alt="x banner"><div class="gallery-caption">✖️ X‑Banner</div></div>
+        <div class="gallery-item"><img src="images/8.jpg" alt="large format"><div class="gallery-caption">📐 Large format</div></div>
+        <div class="gallery-item"><img src="images/9.jpg" alt="poster"><div class="gallery-caption">📌 Social poster</div></div>
+        <div class="gallery-item"><img src="images/10.jpg" alt="thumbnail"><div class="gallery-caption">🎬 Thumbnail</div></div>
+        <div class="gallery-item"><img src="images/11.jpg" alt="business card"><div class="gallery-caption">💳 Business card</div></div>
+        <div class="gallery-item"><img src="images/12.jpg" alt="cash memo"><div class="gallery-caption">🧾 Cash memo</div></div>
+        <div class="gallery-item"><img src="images/13.jpg" alt="banner"><div class="gallery-caption">📢 Banner</div></div>
+        <div class="gallery-item"><img src="images/14.jpg" alt="billboard"><div class="gallery-caption">🪧 Billboard</div></div>
+        <div class="gallery-item"><img src="images/15.jpg" alt="x banner"><div class="gallery-caption">✖️ X‑Banner</div></div>
+        <div class="gallery-item"><img src="images/16.jpg" alt="large format"><div class="gallery-caption">📐 Large format</div></div>
+      </div>
+      <p style="text-align:center; margin-top:2rem; color:#4b5563;"><i class="fas fa-edit"></i> Each design can be edited to your needs — just contact me.</p>
+    </div>
+  </section>
+
+  <!-- CONTACT (with phone number) -->
+  <section id="contact">
+    <div class="container">
+      <h2>Contact & order</h2>
+      <div class="contact-block">
+        <i class="" style="font-size:3rem; color:#2563eb;"></i>
+        <div class="contact-phone-big">
+          <i class="fas fa-phone-alt"></i> +8801745556312
+        </div>
+        <p style="margin: 1.8rem 0; font-size:1.2rem;">Direct call or WhatsApp — I’m available 9am–10pm</p>
+        <a href="https://wa.me/+8801745556312" class="btn" style="margin-right:0;">Order Now</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- FOOTER with social icons (WhatsApp uses phone, others link to main sites) -->
+<footer>
+  <div class="container footer-flex">
+    <p>© 2026 Mahfuzur Rahman. All rights reserved.  Designed with creativity and passion</p>
+    <div class="social-icons">
+      <!-- facebook (main site) -->
+      <a href="https://facebook.com/profile.php?id=61587007482699" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+      <!-- instagram (main site) -->
+      <a href="https://instagram.com/mahfuzurrahmanasim2002/?next=%2F" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+      <!-- whatsapp: direct chat with the given number -->
+      <a href="https://wa.me/+8801745556312" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+    </div>
+  </div>
+  <div class="container" style="margin-top:1.5rem; font-size:0.9rem; opacity:0.7;">
+    <i class="fas fa-map-pin"></i> Bangladesh · remote worldwide
+  </div>
+</footer>
+
+<!-- tiny smooth hover improvement only, no extra JS needed -->
+</body>
+</html>
